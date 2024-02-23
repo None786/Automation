@@ -38,8 +38,7 @@ for value in excel_data.iloc[:, 0]:
         formatted_string = value
     else:
         # Apply formatting if not in the desired format
-        formatted_string = '{}-{}-{}-{}'.format(value[:2], value[2:6], value[6:11], value[11:])
-    
+        formatted_string = '{}-{}-{}-{}'.format(value[:2], value[2:6], value[6:11], value[11:]) 
     # Append the formatted string to the list
     formatted_strings.append(formatted_string)
     #print(formatted_string)
@@ -48,10 +47,8 @@ for value in excel_data.iloc[:, 0]:
 def automate_navigation(main_window):
     # Set the URL of the website
     website_url = "https://e.fbr.gov.pk/"
-
     # Set up the Chrome driver (make sure chromedriver is in your PATH or specify its path)
     #driver = webdriver.Chrome()
-
     try:
         # Open the specified URL
         driver.get(website_url)
@@ -164,4 +161,3 @@ if __name__ == "__main__":
     
     main_window = driver.window_handles[0]
     automate_navigation(main_window)
-
